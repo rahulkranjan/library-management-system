@@ -22,8 +22,8 @@ This project is a **Library Management System** API built using **Django**, **Dj
    - `DELETE /books/<id>/` - Delete a specific book.
 
 3. **Borrow Records**
-   - `POST /borrow/` - Create a borrow record (decreases `available_copies` by 1 if copies are available).
-   - `PUT /borrow/<id>/` - Update a borrow record, e.g., adding a return date.
+   - `POST /borrow-record/` - Create a borrow record (decreases `available_copies` by 1 if copies are available).
+   - `PUT /borrow-record/<id>/return/` - Update a borrow record, e.g., adding a return date.
 
 4. **Reports**
    - `POST /reports/` - Trigger background task to generate a library activity report.
@@ -43,8 +43,10 @@ This project is a **Library Management System** API built using **Django**, **Dj
 
 ### **Prerequisites**
 - Python 3.10 or higher
-- Redis (for Celery backend)
+- Redis (for Celery backend) (use this to run in local ```celery -A library_management worker --loglevel=info```)
 - Docker (optional, for containerized deployment)
+
+
 
 ### **Steps**
 1. Clone the repository:
