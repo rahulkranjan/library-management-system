@@ -43,7 +43,7 @@ This project is a **Library Management System** API built using **Django**, **Dj
 
 ### **Prerequisites**
 - Python 3.10 or higher
-- Redis (for Celery backend) (use this to run in local ```celery -A library_management worker --loglevel=info```)
+- Redis (for Celery backend)
 - Docker (optional, for containerized deployment)
 
 
@@ -53,3 +53,19 @@ This project is a **Library Management System** API built using **Django**, **Dj
    ```bash
    git clone https://github.com/rahulkranjan/library-management-system.git
    cd library-management
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Start the development server:
+   ```bash
+    python manage.py runserver
+
+4. Start the Redis server Ensure Redis is running. If not installed, use Docker:
+   ```bash
+    docker run -d -p 6379:6379 redis
+
+5. Start the Celery worker
+    ```bash
+    celery -A library_management worker --loglevel=info
