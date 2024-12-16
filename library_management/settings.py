@@ -14,7 +14,6 @@ from pathlib import Path
 from datetime import timedelta
 import os
 
-from .env import credentials
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = credentials.get('django_secret_key')
+SECRET_KEY = os.environ['django_secret_key']
 DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
