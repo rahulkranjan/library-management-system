@@ -29,8 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
-
+SECRET_KEY = 'django-insecure-rdz$kblwbcqfvs&!j1^x1c3p3#-w&ui1nx)$ko$k!t8%2_e+e^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -90,7 +89,7 @@ WSGI_APPLICATION = 'library_management.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv("DATABASE_URL"),
+        default='postgresql://postgres:wkgyBzYwOzbFrAewyrZEaAarerndXchF@junction.proxy.rlwy.net:11135/railway',
         conn_max_age=600,
         conn_health_checks=True,
     )
