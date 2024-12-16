@@ -19,11 +19,11 @@ def get_credentials():
         # creds['email_user'] = os.environ['email_user']
         # creds['email_password'] = os.environ['email_password']
         # creds['s3_bucket'] = os.environ['s3_bucket']
-    else:
-        env_file_dir = os.path.dirname(
-            os.path.dirname(os.path.abspath(__file__)))
-        with open(os.path.join(env_file_dir, '.env'), 'r') as f:
-            creds = json.loads(f.read())
+    # else:
+    #     env_file_dir = os.path.dirname(
+    #         os.path.dirname(os.path.abspath(__file__)))
+    #     with open(os.path.join(env_file_dir, '.env.json'), 'r') as f:
+    #         creds = json.loads(f.read())
     return creds
 
 
