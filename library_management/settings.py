@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
     'celery',
+    'corsheaders',
     'library_core',
     
 ]
@@ -185,3 +186,13 @@ SIMPLE_JWT = {
 
 CELERY_BROKER_URL = 'redis://default:ObzWUvyACBQguhCeVjiBsHLswhyOFnOB@autorack.proxy.rlwy.net:38734'
 CELERY_RESULT_BACKEND = 'redis://default:ObzWUvyACBQguhCeVjiBsHLswhyOFnOB@autorack.proxy.rlwy.net:38734' 
+
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://library-management-system-production-f309.up.railway.app'
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'https://library-management-system-production-f309.up.railway.app'
+]
